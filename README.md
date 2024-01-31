@@ -3,6 +3,10 @@
 # La page du cours
 Le cours développement d’applications pour entreprises
 
+
+>Le lien vers le site du cours est [celui-là](https://spiritual-fight-790.notion.site/La-page-du-cours-420-413MV-a9af3e30f11249c0a55c5901248a6a0b). Ce repo servira pour partager le code vu en classe.
+***
+
 ![La carte mémoire du cours](blob/images/course_mind_map.png)
 
 
