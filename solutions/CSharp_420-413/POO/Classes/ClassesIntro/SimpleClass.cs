@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CSharp_420_413.Classes.ClassesIntro
+namespace CSharp_420_413.POO.Classes.ClassesIntro
 {
     internal class SimpleClass
     {

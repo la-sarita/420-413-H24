@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharp_420_413.Basics.Collections
 {
     internal class Dictionaries
     {
-        static void Create()
+        public static void Create()
         {
+            Console.WriteLine("=============== Create Dictionary ================");
+
             IDictionary<int, string> numberNames = new Dictionary<int, string>();
             numberNames.Add(1, "One");
             numberNames.Add(2, "Two");
@@ -21,8 +21,10 @@ namespace CSharp_420_413.Basics.Collections
             }
         }
 
-        static void Access()
+        public static void Access()
         {
+            Console.WriteLine("=============== Access Dictionary ================");
+
             var cities = new Dictionary<string, string>() {
                 {"UK", "London, Manchester, Birmingham" },
                 {"USA", "Chicago, New York, Washington" },
@@ -37,7 +39,7 @@ namespace CSharp_420_413.Basics.Collections
                 Console.WriteLine(cities["France"]);
             }
 
-            if(cities.TryGetValue("France", out string result))
+            if (cities.TryGetValue("France", out string result))
             {
                 Console.WriteLine(result);
             }
@@ -49,8 +51,10 @@ namespace CSharp_420_413.Basics.Collections
             }
         }
 
-        static void Update() 
+        public static void Update()
         {
+            Console.WriteLine("=============== Update Dictionary ================");
+
             var cities = new Dictionary<string, string>() {
                 {"UK", "London, Manchester, Birmingham" },
                 {"USA", "Chicago, New York, Washington" },
@@ -71,8 +75,10 @@ namespace CSharp_420_413.Basics.Collections
             }
         }
 
-        static void Delete()
+        public static void Delete()
         {
+            Console.WriteLine("=============== Delete Dictionary ================");
+
             var cities = new Dictionary<string, string>() {
                 {"UK", "London, Manchester, Birmingham" },
                 {"USA", "Chicago, New York, Washington" },
@@ -82,7 +88,7 @@ namespace CSharp_420_413.Basics.Collections
             Console.WriteLine("Total elements = " + cities.Count);      // 3
             cities.Remove("UK");
 
-            if(cities.ContainsKey("France"))
+            if (cities.ContainsKey("France"))
             { // check if the key exists before removing it
                 cities.Remove("France");
             }

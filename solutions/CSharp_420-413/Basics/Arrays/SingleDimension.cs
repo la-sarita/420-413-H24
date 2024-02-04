@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml.Linq;
 
 namespace CSharp_420_413.Basics.Arrays
 {
@@ -12,8 +7,9 @@ namespace CSharp_420_413.Basics.Arrays
         // Declaration without initialization
         static int[] numbers;
 
-        static void DeclarationAndInitialization()
+        public static void DeclarationAndInitialization()
         {
+            Console.WriteLine("=============== DeclarationAndInitialization ================");
             // Array initialization
             numbers = new int[4] { 1, 2, 3, 4 };
 
@@ -22,16 +18,18 @@ namespace CSharp_420_413.Basics.Arrays
             string[] cars = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
         }
 
-        static void AccessToElements()
+        public static void AccessToElements()
         {
+            Console.WriteLine("=============== AccessToElements ================");
             string[] cars = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
 
             // Access to the first element
             Console.WriteLine(cars[0]);
         }
 
-        static void ModifyElements()
+        public static void ModifyElements()
         {
+            Console.WriteLine("=============== ModifyElements ================");
             string[] cars = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
 
             // Print the value of the first element before the modification
@@ -44,15 +42,17 @@ namespace CSharp_420_413.Basics.Arrays
             Console.WriteLine(cars[0]);
         }
 
-        static void PrintSize()
+        public static void PrintSize()
         {
+            Console.WriteLine("=============== PrintSize ================");
             string[] cars = new string[4] { "Volvo", "BMW", "Ford", "Mazda" };
 
             Console.WriteLine(cars.Length);
         }
 
-        static void CreationOtherWays()
+        public static void CreationOtherWays()
         {
+            Console.WriteLine("=============== CreationOtherWays ================");
             // Create an array of 4 elements without specifying the size
             string[] cars = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
 
@@ -60,8 +60,9 @@ namespace CSharp_420_413.Basics.Arrays
             string[] courses = { "420-312", "420-313", "420-210", "420-413" };
         }
 
-        static void IterateWithForLoop()
+        public static void IterateWithForLoop()
         {
+            Console.WriteLine("=============== IterateWithForLoop ================");
             var cars = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
 
             for (int i = 0; i < cars.Length; i++)
@@ -70,8 +71,9 @@ namespace CSharp_420_413.Basics.Arrays
             }
         }
 
-        static void IterateWithForeachLoop()
+        public static void IterateWithForeachLoop()
         {
+            Console.WriteLine("=============== IterateWithForeachLoop ================");
             var cars = new string[] { "Volvo", "BMW", "Ford", "Mazda" };
 
             foreach (var car in cars)

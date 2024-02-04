@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CSharp_420_413.Basics.Collections
 {
-    internal class Lists
+    public class Lists
     {
-        static void UseSimpleCollection()
+        public static void UseSimpleCollection()
         {
+            Console.WriteLine("\n=============== Create SimpleCollection ================");
+
             var courses = new List<string>();
             courses.Add("420-210");
             courses.Add("420-312");
@@ -22,8 +21,10 @@ namespace CSharp_420_413.Basics.Collections
             }
         }
 
-        static void UseSimpleCollectionWithInitialization()
+        public static void UseSimpleCollectionWithInitialization()
         {
+            Console.WriteLine("\n=============== CollectionWithInitialization ================");
+
             var courses = new List<string>() { "420-210", "420-312", "420-313", "420-413" };
 
             foreach (var course in courses)
@@ -32,8 +33,10 @@ namespace CSharp_420_413.Basics.Collections
             }
         }
 
-        static void UseSimpleCollectionUsingForLoop()
+        public static void UseSimpleCollectionUsingForLoop()
         {
+            Console.WriteLine("\n=============== CollectionUsingForLoop ================");
+
             var courses = new List<string>() { "420-210", "420-312", "420-313", "420-413" };
 
             for (int i = 0; i < courses.Count; i++)
@@ -43,8 +46,10 @@ namespace CSharp_420_413.Basics.Collections
 
         }
 
-        static void UseSimpleCollectionOtherExample()
+        public static void UseSimpleCollectionOtherExample()
         {
+            Console.WriteLine("\n=============== CollectionOtherExample ================");
+
             List<int> primeNumbers = new List<int>();
             primeNumbers.Add(10);
             primeNumbers.Add(20);
@@ -54,9 +59,12 @@ namespace CSharp_420_413.Basics.Collections
             Console.WriteLine("Le nombre d'élements de cette list est : " + primeNumbers.Count);
         }
 
-        static void UseSimpleCollectionWithAddRange() {
+        public static void UseSimpleCollectionWithAddRange()
+        {
+            Console.WriteLine("\n=============== CollectionWithAddRange ================");
+
             var cities = new string[] { "Mumbai", "London", "New York" };
-            
+
             var popularCities = new List<string>();
 
             // Add an array in a list
@@ -67,12 +75,14 @@ namespace CSharp_420_413.Basics.Collections
             // Add a list in a list
             bigCities.AddRange(popularCities);
 
-            Console.WriteLine(popularCities);
-            Console.WriteLine(bigCities);
+            Console.WriteLine(popularCities.Count);
+            Console.WriteLine(bigCities.Count);
         }
 
-        static void UseSimpleCollectionAccessElements()
+        public static void UseSimpleCollectionAccessElements()
         {
+            Console.WriteLine("\n=============== CollectionAccessElements ================");
+
             var numbers = new List<int>() { 10, 20, 30, 40, 50 };
 
             foreach (int number in numbers)
@@ -80,23 +90,27 @@ namespace CSharp_420_413.Basics.Collections
                 Console.WriteLine(number);
             }
 
-            for(int i = 0; i < numbers.Count; i++)
+            for (int i = 0; i < numbers.Count; i++)
             {
                 Console.WriteLine(numbers[i]);
             }
         }
 
-        static void UseSimpleCollectionInsertElements()
+        public static void UseSimpleCollectionInsertElements()
         {
+            Console.WriteLine("\n=============== CollectionInsertElements ================");
+
             var numbers = new List<int>() { 10, 20, 30, 40 };
 
             numbers.Insert(1, 11);
 
-            foreach (int number in numbers) {  Console.WriteLine(number); }
+            foreach (int number in numbers) { Console.WriteLine(number); }
         }
 
-        static void UseSimpleCollectionRemoveElements()
+        public static void UseSimpleCollectionRemoveElements()
         {
+            Console.WriteLine("\n=============== CollectionRemoveElements ================");
+
             var numbers = new List<int>() { 10, 20, 30, 40, 10 };
 
             numbers.Remove(10);     // Remove the first element equal to 10
@@ -105,8 +119,10 @@ namespace CSharp_420_413.Basics.Collections
             foreach (int number in numbers) { Console.WriteLine(number); }
         }
 
-        static void UseSimpleCollectionCheckElementExists()
+        public static void UseSimpleCollectionCheckElementExists()
         {
+            Console.WriteLine("\n=============== CollectionCheckElementExists ================");
+
             var numbers = new List<int>() { 10, 20, 30, 40 };
 
             Console.WriteLine(numbers.Contains(10));    // true

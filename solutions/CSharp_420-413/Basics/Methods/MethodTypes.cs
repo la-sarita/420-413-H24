@@ -1,20 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CSharp_420_413.Basics
+namespace CSharp_420_413.Basics.Methods
 {
-    internal class Methods
+    internal class MethodTypes
     {
         static void MethodWithoutParams()
         {
             Console.WriteLine("Salut tout le monde");
         }
 
-        static int MethodWithReturn(int a, int b) { 
-            return a + b; 
+        static int MethodWithReturn(int a, int b)
+        {
+            return a + b;
         }
 
         static void MethodPassingParamByValue(int var)
@@ -32,7 +29,7 @@ namespace CSharp_420_413.Basics
             var = 30;
         }
 
-        static void callMethods()
+        public static void callMethods()
         {
             int var1 = 10, var2 = 10, var3;
 
