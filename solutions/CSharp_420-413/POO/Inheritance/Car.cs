@@ -1,6 +1,8 @@
-﻿namespace CSharp_420_413.POO.Classes.ClassesIntro
+﻿using CSharp_420_413.POO.Inheritance;
+
+namespace CSharp_420_413.POO.Classes.ClassesIntro
 {
-    class Car
+    sealed class Car : Vehicle
     {
         public string Model { get; set; }
         public string Color { get; set; }
@@ -24,4 +26,5 @@
             return $"{Model} {Year} color {Color} and it's max speed {MaxSpeed}";
         }
     }
+
 }

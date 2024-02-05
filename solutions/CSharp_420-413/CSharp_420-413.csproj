@@ -54,15 +54,16 @@
     <Compile Include="Basics\Methods\MethodTypes.cs" />
     <Compile Include="Basics\Variables&amp;Types\PrimitiveTypes.cs" />
     <Compile Include="Basics\Variables&amp;Types\TypesConversion.cs" />
-    <Compile Include="POO\Classes\ClassesIntro\Car.cs" />
+    <Compile Include="POO\Inheritance\Car.cs" />
     <Compile Include="POO\Classes\ClassesIntro\AccessByIndexer.cs" />
     <Compile Include="POO\Classes\ClassesIntro\Customer.cs" />
     <Compile Include="POO\Classes\ClassesIntro\Order.cs" />
     <Compile Include="POO\Classes\ClassesIntro\Person.cs" />
-    <Compile Include="POO\Classes\ClassesIntro\SimpleClass.cs" />
+    <Compile Include="POO\Classes\ClassesIntro\StaticClass.cs" />
     <Compile Include="MainProgram.cs" />
     <Compile Include="POO\Classes\ClassesIntro\Students.cs" />
     <Compile Include="POO\Enums\Enums.cs" />
+    <Compile Include="POO\Inheritance\Vehicle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

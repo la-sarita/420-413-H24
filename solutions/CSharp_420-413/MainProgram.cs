@@ -5,12 +5,15 @@ using CSharp_420_413.Basics.ControleInstructions;
 using CSharp_420_413.Basics.Methods;
 using CSharp_420_413.Basics.Variables_Types;
 using CSharp_420_413.POO.Classes.ClassesIntro;
+using CSharp_420_413.POO.Inheritance;
+using CSharp_420_413.POO.Enums;
 using System;
 
 namespace CSharp_420_413
 {
     class MainProgram
     {
+
         static void Main(string[] args)
         {
             Console.WriteLine("###################################################");
@@ -25,6 +28,9 @@ namespace CSharp_420_413
             Console.WriteLine("====================== POO ========================");
             Console.WriteLine("###################################################\n\n");
             CallClasses();
+            CallEnums();
+            CallInheritance();
+
 
         }
 
@@ -50,15 +56,9 @@ namespace CSharp_420_413
             person1.Name = "Liam";
             Console.WriteLine(person1.Name + ": " + person1.Birthday.ToShortDateString());
 
-            Order order1 = new Order(1, 250.5, 5, 3, 1, new DateTime(2024, 1, 3));
-            Order order2 = new Order(2, 315.95, 8, 5, 1, new DateTime(2024, 1, 26));
-            Order order3 = new Order(3, 480.0, 2, 2);
-
             Customer customer = new Customer();
             customer.Name = "Trembley";
-            customer.Orders.Add(order1);
-            customer.Orders.Add(order2);
-            customer.Orders.Add(order3);
+            customer = AddSomeOrders(customer);
 
             Console.WriteLine($"There are {customer.Orders.Count} orders made by {customer.Name}");
 
@@ -138,6 +138,54 @@ namespace CSharp_420_413
             Console.WriteLine("========== Types Conversion ============");
             Console.WriteLine("========================================\n");
             TypesConversion.ConvertNumbers();
+        }
+
+        static Customer AddSomeOrders(Customer customer)
+        {
+            Order order1 = new Order(1, 250.5, 5, 3, 1, new DateTime(2024, 1, 3));
+            Order order2 = new Order(2, 315.95, 8, 5, 1, new DateTime(2024, 1, 26));
+            Order order3 = new Order(3, 480.0, 2, 2);
+
+            customer.Orders.Add(order1);
+            customer.Orders.Add(order2);
+            customer.Orders.Add(order3);
+
+            return customer;
+        }
+
+        static void CallEnums()
+        {
+            Console.WriteLine("\n========================================");
+            Console.WriteLine("================ Enums =================");
+            Console.WriteLine("========================================\n");
+
+            int birthdayMonth = (int)Months.April;
+            Console.WriteLine(birthdayMonth);
+
+            Level severityLevel = Level.Medium;
+            switch (severityLevel)
+            {
+                case Level.Low:
+                    Console.WriteLine("The severity level is low");
+                    break;
+                case Level.Medium:
+                    Console.WriteLine("The severity level is medium");
+                    break;
+                case Level.High:
+                    Console.WriteLine("The severity le vel is hight");
+                    break;
+            }
+        }
+
+        static void CallInheritance()
+        {
+            Car car = new Car();
+
+            car.Brand = "Opel";
+            car.Model = "Corsa";
+
+            Console.WriteLine($"The car brand is : {car.Brand}, it's model is : {car.Model}");
+            car.Honk();
         }
 
     }
