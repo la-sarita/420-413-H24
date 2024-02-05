@@ -54,6 +54,7 @@
     <Compile Include="Basics\Methods\MethodTypes.cs" />
     <Compile Include="Basics\Variables&amp;Types\PrimitiveTypes.cs" />
     <Compile Include="Basics\Variables&amp;Types\TypesConversion.cs" />
+    <Compile Include="POO\Inheritance\Base.cs" />
     <Compile Include="POO\Inheritance\Car.cs" />
     <Compile Include="POO\Classes\ClassesIntro\AccessByIndexer.cs" />
     <Compile Include="POO\Classes\ClassesIntro\Customer.cs" />
@@ -63,7 +64,14 @@
     <Compile Include="MainProgram.cs" />
     <Compile Include="POO\Classes\ClassesIntro\Students.cs" />
     <Compile Include="POO\Enums\Enums.cs" />
+    <Compile Include="POO\Inheritance\ConstructedTypesImplementExtend.cs" />
+    <Compile Include="POO\Inheritance\Customer2.cs" />
+    <Compile Include="POO\Inheritance\CustomerPartialClass.cs" />
     <Compile Include="POO\Inheritance\Vehicle.cs" />
+    <Compile Include="POO\Interfaces\InterfaceImplementation.cs" />
+    <Compile Include="POO\Interfaces\IPoint.cs" />
+    <Compile Include="POO\Interfaces\PointImplementation.cs" />
+    <Compile Include="POO\Plymorphism\Shape.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

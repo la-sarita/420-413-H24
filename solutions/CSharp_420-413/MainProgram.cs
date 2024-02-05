@@ -8,6 +8,7 @@ using CSharp_420_413.POO.Classes.ClassesIntro;
 using CSharp_420_413.POO.Inheritance;
 using CSharp_420_413.POO.Enums;
 using System;
+using CSharp_420_413.POO.Interfaces;
 
 namespace CSharp_420_413
 {
@@ -186,6 +187,25 @@ namespace CSharp_420_413
 
             Console.WriteLine($"The car brand is : {car.Brand}, it's model is : {car.Model}");
             car.Honk();
+        }
+
+        static void CallInterfaces()
+        {
+            // Declare an interface instance.
+            ISampleInterface obj = new ImplementationClass();
+
+            // Call the member.
+            obj.SampleMethod();
+
+            IPoint p = new Point(2, 3);
+            Console.Write("My Point: ");
+            PrintPoint(p);                  // Output: My Point: x=2, y=3
+
+        }
+
+        static void PrintPoint(IPoint p)
+        {
+            Console.WriteLine("x={0}, y={1}", p.X, p.Y);
         }
 
     }

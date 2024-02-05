@@ -4,7 +4,7 @@ namespace CSharp_420_413.POO.Classes.ClassesIntro
 {
     class Person
     {
-        private string _name;        // field
+        private int _age;        // field
 
         public DateTime Birthday { get; set; }
         public string Name          // property
@@ -14,7 +14,7 @@ namespace CSharp_420_413.POO.Classes.ClassesIntro
         {
             Birthday = birthday;
         }
-        public int age              // Calculated property
+        public int Age              // Calculated property
         {
             get
             {
