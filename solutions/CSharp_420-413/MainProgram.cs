@@ -9,6 +9,7 @@ using CSharp_420_413.POO.Inheritance;
 using CSharp_420_413.POO.Enums;
 using System;
 using CSharp_420_413.POO.Interfaces;
+using CSharp_420_413.Advanced.Events;
 
 namespace CSharp_420_413
 {
@@ -31,7 +32,10 @@ namespace CSharp_420_413
             CallClasses();
             CallEnums();
             CallInheritance();
-
+            Console.WriteLine("\n###################################################");
+            Console.WriteLine("==================== Advanced =====================");
+            Console.WriteLine("###################################################\n\n");
+            CallEventHandlers();
 
         }
 
@@ -206,6 +210,39 @@ namespace CSharp_420_413
         static void PrintPoint(IPoint p)
         {
             Console.WriteLine("x={0}, y={1}", p.X, p.Y);
+        }
+
+        static void CallEventHandlers()
+        {
+            Console.WriteLine("\n========================================");
+            Console.WriteLine("============== Events ==================");
+            Console.WriteLine("========================================\n");
+
+            //Create the event publishers and subscriber
+            var circle = new Circle(54);
+            var rectangle = new Rectangle(12, 9);
+            var container = new ShapeContainer();
+
+            // Add the shapes to the container.
+            container.AddShape(circle);
+            container.AddShape(rectangle);
+
+            // Cause some events to be raised.
+            circle.Update(57);
+            rectangle.Update(7, 7);
+
+            // Keep the console window open in debug mode.
+            Console.WriteLine("Press any key to continue...");
+            Console.ReadKey();
+
+            Shape shape = new Shape();
+            Subscriber1 sub = new Subscriber1(shape);
+            Subscriber2 sub2 = new Subscriber2(shape);
+            shape.Draw();
+
+            // Keep the console window open in debug mode.
+            System.Console.WriteLine("Press any key to exit.");
+            System.Console.ReadKey();
         }
 
     }

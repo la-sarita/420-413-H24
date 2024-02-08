@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace CSharp_420_413.POO.Plymorphism
 {
     // base class
-    public class Shape
+    internal class Shape
     {
         // A few example members
         public int X { get; private set; }
@@ -23,7 +23,7 @@ namespace CSharp_420_413.POO.Plymorphism
     }
 
     // Derived class
-    public class Circle : Shape
+    internal class Circle : Shape
     {
         public override void Draw()
         {
@@ -34,7 +34,7 @@ namespace CSharp_420_413.POO.Plymorphism
     }
 
     // Derived class
-    public class Rectangle : Shape
+    internal class Rectangle : Shape
     {
         public override void Draw()
         {
@@ -45,7 +45,7 @@ namespace CSharp_420_413.POO.Plymorphism
     }
 
     // Derived class
-    public class Triangle : Shape
+    internal class Triangle : Shape
     {
         public override void Draw()
         {

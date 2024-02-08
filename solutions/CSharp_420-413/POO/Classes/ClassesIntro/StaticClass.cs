@@ -2,7 +2,7 @@
 
 namespace CSharp_420_413.POO.Classes.ClassesIntro
 {
-    internal static class StaticClass
+    internal class StaticClass
     {
         static string myClassAttribut;
 

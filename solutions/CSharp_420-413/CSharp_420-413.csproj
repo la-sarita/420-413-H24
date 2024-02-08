@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advanced\Events\EventHandler.cs" />
+    <Compile Include="Advanced\Events\ShapeEventArgs.cs" />
+    <Compile Include="Advanced\Files&amp;Directories\FileReadWrite.cs" />
+    <Compile Include="Advanced\Files&amp;Directories\PathExample.cs" />
+    <Compile Include="Advanced\IDrawingObject.cs" />
+    <Compile Include="Advanced\Streams\FileStreamExample.cs" />
     <Compile Include="Basics\Arrays\MultiDimension.cs" />
     <Compile Include="Basics\Arrays\SingleDimension.cs" />
     <Compile Include="Basics\Collections\Dictionaries.cs" />

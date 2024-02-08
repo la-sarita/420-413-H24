@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Web;
 
 namespace CSharp_420_413.POO.Classes.ClassesIntro
 {
@@ -9,6 +10,17 @@ namespace CSharp_420_413.POO.Classes.ClassesIntro
         public DateTime Birthday { get; set; }
         public string Name          // property
         { get; set; }               // (auto-implemented property)
+
+        //private string _name;
+        //public string GetName()
+        //{
+        //    return _name;
+        //}
+
+        //public void SetName(string name)
+        //{
+        //    _name = name;
+        //}
 
         public Person(DateTime birthday)
         {
