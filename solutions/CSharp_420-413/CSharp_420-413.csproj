@@ -60,6 +60,8 @@
     <Compile Include="Basics\Methods\MethodTypes.cs" />
     <Compile Include="Basics\Variables&amp;Types\PrimitiveTypes.cs" />
     <Compile Include="Basics\Variables&amp;Types\TypesConversion.cs" />
+    <Compile Include="Evals\Quiz1\Employe.cs" />
+    <Compile Include="Evals\Quiz1\Manager.cs" />
     <Compile Include="POO\Inheritance\Base.cs" />
     <Compile Include="POO\Inheritance\Car.cs" />
     <Compile Include="POO\Classes\ClassesIntro\AccessByIndexer.cs" />
@@ -73,6 +75,7 @@
     <Compile Include="POO\Inheritance\ConstructedTypesImplementExtend.cs" />
     <Compile Include="POO\Inheritance\Customer2.cs" />
     <Compile Include="POO\Inheritance\CustomerPartialClass.cs" />
+    <Compile Include="POO\Inheritance\MultipleInheritanceSimulation.cs" />
     <Compile Include="POO\Inheritance\Vehicle.cs" />
     <Compile Include="POO\Interfaces\InterfaceImplementation.cs" />
     <Compile Include="POO\Interfaces\IPoint.cs" />

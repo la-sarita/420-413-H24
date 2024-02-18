@@ -10,6 +10,8 @@ using CSharp_420_413.POO.Enums;
 using System;
 using CSharp_420_413.POO.Interfaces;
 using CSharp_420_413.Advanced.Events;
+using CSharp_420_413.Evals.Quiz1;
+using System.Security.Claims;
 
 namespace CSharp_420_413
 {
@@ -191,6 +193,22 @@ namespace CSharp_420_413
 
             Console.WriteLine($"The car brand is : {car.Brand}, it's model is : {car.Model}");
             car.Honk();
+
+            Omnivore omni = new Omnivore();
+            omni.Deplacer();
+
+            B b = new B();
+            A a = new A();
+            a.Test(b);
+
+            Employe employe = new Employe {Nom = "Alain", Poste = "Assistant de direction", Salaire = 65000};
+            Manager manager = new Manager();
+            manager.Nom = "Laura";
+            manager.Poste = "Directrice des ressources humaines";
+            manager.Salaire = 95000;
+            employe.AfficherInfos(); // Nom: Alain - Poste Assistant de direction - Salaire : 65000 $
+ 
+            manager.AfficherInfos();// Nom: Laura - Poste Directrice des ressources humaines -Salaire : 95000 $ -Bonus : 9500 $
         }
 
         static void CallInterfaces()
