@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="People.MainPage" 
+             BackgroundColor="{DynamicResource Light}">
+
+    <Grid Padding="5" RowSpacing="5" ColumnSpacing="5"
+          RowDefinitions="Auto,Auto,Auto,Auto,*">
+
+        <Entry x:Name="newPerson"
+           Placeholder="Enter name" />
+
+        <Button Text="Add Person"
+            Grid.Row="1"
+            Clicked="OnNewButtonClicked" />
+
+        <Label x:Name="statusMessage"
+           TextColor="{StaticResource Primary}"
+           Grid.Row="2" />
+
+        <Button Text="Get All People"
+            Grid.Row="3"
+            Clicked="OnGetButtonClicked" />
+
+        <CollectionView x:Name="peopleList" Grid.Row="4">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Grid ColumnDefinitions="*,2*">
+                        <Label Text="{Binding Id}" TextColor="{StaticResource Primary}"/>
+                        <Label Grid.Column="1" Text="{Binding Name}" TextColor="{StaticResource Primary}"/>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

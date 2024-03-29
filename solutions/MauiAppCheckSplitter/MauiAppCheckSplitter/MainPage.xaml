@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:vm="clr-namespace:MauiAppCheckSplitter.ViewModels"
+             x:Class="MauiAppCheckSplitter.MainPage">
+
+    <ContentPage.BindingContext>
+        <vm:CheckViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#bcd3ed"/>
+    </ContentPage.Behaviors>
+
+    <ContentPage.Resources>
+        <Style x:Key="NummericEntry" TargetType="Entry">
+            <Setter Property="BackgroundColor" Value="#1a82a8"/>
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="Keyboard" Value="Numeric"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="End"/>
+        </Style>
+        <Style x:Key="NummericPicker" TargetType="Picker">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalTextAlignment" Value="End"/>
+        </Style>
+        <Style x:Key="NummericLabel" TargetType="Label">
+            <Setter Property="TextColor" Value="black"/>
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="End"/>
+        </Style>
+        <Style x:Key="NummericGrid" TargetType="Grid">
+            <Setter Property="ColumnSpacing" Value="25"/>
+            <Setter Property="RowSpacing" Value="15"/>
+            <Setter Property="Padding" Value="0"/>
+            <Setter Property="ColumnDefinitions" Value="*,*"/>
+            <Setter Property="RowDefinitions" Value="*,*"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="20,0"
+            Spacing="10">
+            <VerticalStackLayout.Background>
+                <LinearGradientBrush EndPoint="0,1">
+                    <GradientStop Offset="0.1" Color="#8cd3ed"/>
+                    <GradientStop Offset="1.0" Color="#197ea3"/>
+                </LinearGradientBrush>
+            </VerticalStackLayout.Background>
+            <Label FontFamily="KastoreBold"
+                   FontSize="44"
+                   Text="Check Splitter"
+                   Margin="20,30,20,10"
+                   TextColor="#197ea3"/>
+            <Frame BackgroundColor="#8888d2ec">
+                <Grid RowDefinitions="*,*,*" Style="{StaticResource NummericGrid}">
+                    <Label 
+                        Style="{StaticResource NummericLabel}"
+                        Text="Amount"/>
+                    <Entry 
+                        Grid.Column="1"
+                        Placeholder="Enter the check amount"
+                        PlaceholderColor="Gray"
+                        Style="{StaticResource NummericLabel}"
+                        Text="{Binding Amount}"/>
+                    <Label 
+                        Grid.Row="1"
+                        Style="{StaticResource NummericLabel}"
+                        Text="Tip %" />
+                    <Entry 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Placeholder="Tip as percent"
+                        Style="{StaticResource NummericEntry}"
+                        Text="{Binding TipRate}" />
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="#8888d2ec">
+                <Grid Style="{StaticResource NummericGrid}">
+                    <Label 
+                        Style="{StaticResource NummericLabel}"
+                        Text="Tip"/>
+                    <Label 
+                        Grid.Column="1"
+                        Style="{StaticResource NummericLabel}"
+                        Text="{Binding Tip, StringFormat='{0:C}'}"/>
+                    <Label 
+                        Grid.Row="1"
+                        Style="{StaticResource NummericLabel}"
+                        Text="Total"/>
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Style="{StaticResource NummericLabel}"
+                        Text="{Binding Total, StringFormat='{0:C}'}"/>
+                </Grid>
+            </Frame>
+            <Frame BackgroundColor="#8888d2ec" HasShadow="False">
+                <Grid RowDefinitions="Auto,*" Style="{StaticResource NummericGrid}">
+                    <Label 
+                        Style="{StaticResource NummericLabel}"
+                        Text="# of people"/>
+                    <Picker
+                        x:Name="NumberOfPeople"
+                        Grid.Column="1"
+                        SelectedIndexChanged="NumberOfPeople_SelectedIndexChanged"
+                        Style="{StaticResource NummericPicker}"/>
+                    <Label 
+                        Grid.Row="1"
+                        Style="{StaticResource NummericLabel}"
+                        Text="Each pays"/>
+                    <Label 
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Style="{StaticResource NummericLabel}"
+                        Text="{Binding PersonalAmount, StringFormat='{0:C}'}"/>
+                </Grid>
+            </Frame>
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
